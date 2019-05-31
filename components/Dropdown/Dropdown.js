@@ -11,9 +11,7 @@ class Dropdown {
     this.content = document.querySelector('.dropdown-content');
     
     // Add a click handler to the button reference and call the toggleContent method.
-    this.button.addEventListener('click', () => {
-      this.button.toggleContent();
-    })
+    this.button.addEventListener('click', () => this.toggleContent());
   }
 
   toggleContent() {
@@ -24,6 +22,9 @@ class Dropdown {
 
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
-const dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
+const dropdowns = document.querySelectorAll('.dropdown')
 
 console.log(dropdowns);
+
+dropdowns.forEach( dropdown => new Dropdown(dropdown));
+
